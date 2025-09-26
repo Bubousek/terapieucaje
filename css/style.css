@@ -1,0 +1,668 @@
+
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+.montserrat-variable {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .corinthia-regular {
+    font-family: "Corinthia", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .corinthia-bold {
+    font-family: "Corinthia", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  body {
+  
+      margin: 0;
+      padding : 0;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      line-height: 1.25;
+      background-color: #e1ded0;
+      color: darkgreen;
+      margin-left: auto;
+      margin-right: auto;
+   
+    }
+
+    
+  
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .header {
+    color: darkgreen;
+    background-color: #e1ded0;
+    margin-top: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .header__logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+  
+  .header__logo {
+    height: 75px;
+    width: auto;
+    padding: 0; 
+  }
+  
+  .header-navigation__tabs {
+    position: relative;
+  }
+  
+  .header-navigation__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .header-navigation__button {
+      color: darkgreen;
+      font-size: 1.3rem;
+      font-family: Raleway;
+      padding: 0px 12px;
+      text-decoration: none; 
+      display: block;
+      white-space: nowrap;
+      
+  }
+  
+  .header-navigation__button:hover {
+      text-decoration: underline;
+  }
+  .header-navigation__button:active {
+      text-decoration: underline;
+  }
+  .header-navigation__button:visited {
+      text-decoration: none;
+  }
+
+  .header-navigation__link {
+    color: #73845a;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    white-space: nowrap;
+  
+  }
+  
+  
+
+  /* prepinac CS/EN */
+
+ .language-switcher {
+  text-align: right;
+  margin-top: 0.1rem;
+  margin-right: 1rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.language-switcher a {
+  text-decoration: none;
+  color: #73845a; /* nebo jiná barva podle pozadí */
+  margin-left: 0;
+}
+
+@media (max-width: 1099px) {
+  .language-switcher {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-right: 0;
+  }
+}
+  
+/*hamburger menu moje noční můra */
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;                   /*display none */
+}
+
+.menu__toggler {
+  cursor: pointer;
+  color: #73845a;
+  
+  font-size: 2.5rem;
+  
+  
+}
+
+.header-navigation__list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #e1ded0;
+}
+
+.header-navigation__tabs {
+  border-bottom: 1px solid #73845a;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.header-navigation__button {
+  font-weight: 300;
+    font-style: normal;
+    padding: 10px 15px;
+    
+}
+.header-navigation__link {
+  display: block;
+  padding: 10px 15px;
+  color: #73845a;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+.menu__checkbox:checked ~ .header-navigation__list {
+  display: block
+
+}
+.header__logo {
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+  height: 80px; /* Výška loga */
+}
+.header__logo-container {
+  display: inline;
+  text-align: center;
+}
+
+@media screen and (max-width: 1099px) {
+  .header-navigation__button:hover {
+    text-decoration: none;
+}
+.header-navigation__button:active {
+    text-decoration: none;
+}
+
+  
+}
+
+@media screen  and (min-width: 1100px) {
+  .menu__toggler {
+    display: none; /* Skryje checkbox na větších obrazovkách */
+  }
+  .header-navigation__list {
+    display: flex !important ;/* Zobrazí menu jako flexbox */
+    flex-direction: row; /* Horizontální uspořádání */
+    justify-content: center; /* Zarovná položky na střed */
+  }
+  .header-navigation__link {
+    padding: 15px; /* Větší padding pro desktop */
+  }
+
+  .header-navigation__tabs {
+    border-bottom: none; /* Odstraní spodní okraj na desktopu */
+    margin-top: 0; /* Odstraní horní okraj na desktopu */
+    margin-bottom: 0; /* Odstraní spodní okraj na desktopu */
+  }
+
+  .header-navigation__button {
+    margin-top: 0;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .header__logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+  
+}
+.main-title {
+    font-size: 180px;
+    font-family: Corinthia;
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+
+  }
+.motto {
+  font-size: 40px;
+  font-family: Corinthia;
+    font-style: italic;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+  @media screen  and (min-width: 600px) {
+    .footer-copyright {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+      }
+    
+    .footer-copyright__creator {
+      color: #73845a;
+      font-size: 14px;
+      font-weight: 300;
+      text-transform: none;
+    }
+    
+    .footer-copyright__pavla {
+      color: #73845a;
+      font-size: 14px;
+      font-weight: 300;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .footer-copyright {
+      background-color: #aabb97;
+      color: #73845a;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    .sluzby {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .foto-1 {
+      flex-basis: 64%;
+      position: relative;
+    }
+
+    .foto-1__popis {
+      position: absolute;
+      right: 40px; bottom: 20px;
+      color: white;
+      font-family: Corinthia;
+      font-size: 60px;
+      margin: 0;
+    }
+
+    .foto-2 {
+      flex-basis: 36%;
+      position: relative;
+      display: inline-block;
+    }
+
+    .foto-2 img {
+      display: block;
+      width: 100%;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4); /* černý průhledný filtr */
+    }
+    
+    
+
+    .foto-2__popis {
+      position: absolute;
+      left: 20px; top: 10px;
+      margin: 0;
+      color: white;
+      font-family: Corinthia;
+      font-size: 2rem;
+      font-weight: bold;
+
+    }
+
+    img { 
+      display: block;
+      width: 100%;
+
+    }
+
+    .kontakt {
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .kontakt-adresa {
+      text-align: center;
+    }
+    .mhd {
+      text-align: center;
+    }
+
+    .mapa-obrazek {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 800px;
+    }
+
+    .main-content {
+      max-width: 1200;
+      margin: 0, auto;
+      padding: 10xp;
+      text-align: center;
+    }
+
+    /* kontaktnií formulář */
+
+   /* Barevná paleta vycházející z tvého webu */
+:root{
+  --bg: #e1ded0;          /* světle béžové pozadí stránky */
+  --panel: #fffdf6;       /* světlý panel/formulář */
+  --text: darkgreen;      /* hlavní text */
+  --muted: #73845a;       /* sekundární text/odkazy */
+  --line: #aabb97;        /* jemné rámečky */
+  --accent: #aabb97;      /* zvýraznění / tlačítka */
+  --accent-ink: #2a3a1f;  /* text na akcentu */
+  --danger: #b54848;      /* chybové stavy */
+  --radius: 12px;
+  --gap: 14px;
+  --shadow: 0 4px 24px rgba(0,0,0,.06);
+  --font: "Work Sans", sans-serif;
+}
+
+
+/* Obal kontaktní sekce drž v šířce tvé .container */
+.contact-wrap{
+ 
+  max-width: 800px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 24px) 20px;
+  display: grid;
+  gap: 20px;
+}
+
+/* Nadpis + podnadpis */
+.heading{
+  text-align: center;
+  color: var(--text);
+}
+.heading h1{
+  margin: 0 0 6px 0;
+  font-weight: 600;
+  font-size: clamp(22px, 3.6vw, 32px);
+  /* pokud chceš rukopisný vibe: přidej class="corinthia-bold" přímo v HTML */
+}
+.heading p{
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(14px, 2.4vw, 16px);
+}
+
+/* Karta/formulář */
+.contact-card{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(18px, 4vw, 28px);
+}
+
+/* Layout formuláře */
+form{ display: grid; gap: var(--gap); }
+
+/* Řádek se dvěma poli (telefon / předmět) – mobil 1 sloupec, tablet+ 2 sloupce */
+.row{
+  display: grid;
+  gap: var(--gap);
+}
+@media (min-width: 720px){
+  .row{ grid-template-columns: 1fr 1fr; }
+}
+
+label{
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+label .req{
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.hint{
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Vstupy */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea{
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  color: var(--text);
+  line-height: 1.35;
+  transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+textarea{ min-height: 140px; resize: vertical; }
+input::placeholder, textarea::placeholder{ color: color-mix(in srgb, var(--muted) 70%, #fff 30%); }
+
+/* Focus a validace */
+input:focus, select:focus, textarea:focus{
+  border-color: var(--muted);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--muted) 25%, transparent);
+  outline: none;
+}
+input:invalid, select:invalid, textarea:invalid{
+  border-color: var(--danger);
+}
+
+/* Zprávy o chybách (HTML ponecháno beze změn) */
+.error-msg{
+  display: none;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--danger);
+}
+input:invalid ~ .error-msg,
+textarea:invalid ~ .error-msg{
+  display: block;
+}
+
+/* Checkbox GDPR */
+.checkbox{
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  background: #faf7ed;
+}
+.checkbox input{
+  margin-top: 2px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--muted);
+}
+.checkbox a{
+  color: var(--muted);
+  text-underline-offset: 2px;
+}
+
+/* Akce */
+.actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 6px;
+}
+button{
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent);
+  color: var(--accent-ink);
+  transition: filter .2s ease, transform .06s ease, box-shadow .2s ease;
+  box-shadow: 0 6px 18px rgba(170,187,151,.35);
+}
+button:hover{ filter: saturate(110%); }
+button:active{ transform: translateY(1px); }
+.note{ color: var(--muted); font-size: 13px; }
+
+/* Volitelné pole pro „Jiné“ – pokud by ses k němu vrátila */
+.subject-other{ display: none; }
+/* (Necháváme připravené – stačí v HTML vrátit volbu "Jiné (napište)" a blok .subject-other) */
+/* form:has(#subject option[value="other"]:checked) .subject-other{ display:block; } */
+
+/* Děkovná zpráva (#dekujeme v URL) */
+#dekujeme{
+  display: none;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  background: #f4f1e3;
+  color: var(--text);
+  border-radius: 10px;
+}
+:target#dekujeme{ display: block; }
+
+/* Honeypot pole (anti-spam) – zůstává neviditelné */
+.hp{ position: absolute; left: -9999px; top: auto; width:1px; height:1px; overflow:hidden; }
+
+/* ===== Responsivita (mobil vs. desktop) ===== */
+
+/* Mobil – základ (do 719px už pokrýváme výše) */
+@media (max-width: 599px){
+  .contact-wrap{ padding-left: 16px; padding-right: 16px; }
+  button{ width: 100%; text-align: center; }
+}
+
+/* Tablet/desktop – jemná typografie a spacing */
+@media (min-width: 900px){
+  .heading h1{ font-size: 34px; }
+  .contact-card{ padding: 32px; }
+}
+
+/* Široké desktopy – držíme max šířku + uhlazený vzhled */
+@media (min-width: 1200px){
+  .contact-wrap{ padding-left: 0; padding-right: 0; }
+}
+    
+/*rezervace */
+/* wrapper pro centrování tlačítka */
+.rezervace-cta{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 12px;
+  margin-block: 12px 24px;
+}
+
+/* základní vzhled */
+.rezervace-btn{
+  appearance:none;
+  -webkit-appearance:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.6rem;
+  padding:12px 22px;
+  border-radius:999px;
+  border:1px solid var(--btn-border);
+  background: linear-gradient(180deg, var(--btn-bg), color-mix(in srgb, var(--btn-bg) 80%, #000 20%));
+  color: var(--btn-ink);
+  font-family:"Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight:700;
+  letter-spacing:.2px;
+  text-decoration:none;
+  line-height:1.2;
+  box-shadow: var(--btn-shadow);
+  cursor:pointer;
+  transition: filter .2s ease, transform .06s ease, box-shadow .2s ease;
+}
+
+/* hover/active/focus */
+.rezervace-btn:hover{ filter:saturate(112%); }
+.rezervace-btn:active{ transform: translateY(1px); }
+.rezervace-btn:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-ring), var(--btn-shadow);
+}
+
+/* velikosti */
+.rezervace-btn--lg{ padding:14px 26px; font-size:1.05rem; }
+.rezervace-btn--sm{ padding:10px 16px; font-size:.94rem; }
+
+/* varianta: outline */
+.rezervace-btn--outline{
+  background: #fffdf6;
+  color: darkgreen;
+  border-color: #aabb97;
+  box-shadow: 0 6px 16px rgba(170,187,151,.25);
+}
+.rezervace-btn--outline:hover{ filter:saturate(108%); }
+
+/* varianta: ghost (průhledné) */
+.rezervace-btn--ghost{
+  background: var(--btn-bg-ghost);
+  border-color: var(--btn-border-ghost);
+  color: var(--btn-ink-ghost);
+  box-shadow: none;
+}
+.rezervace-btn--ghost:hover{
+  background: rgba(170,187,151,.12);
+}
+
+/* ikona (emoji/SVG) vedle textu */
+.rezervace-btn .icon{
+  font-size:1.15em;
+  line-height:0;
+}
+
+/* plná šířka na mobilu */
+@media (max-width: 599px){
+  .rezervace-cta{ padding-inline: 16px; }
+  .rezervace-btn{ width:100%; text-align:center; }
+}
+
+/* disabled stavy */
+.rezervace-btn[aria-disabled="true"],
+.rezervace-btn.is-disabled{
+  opacity:.55;
+  pointer-events:none;
+  filter:saturate(85%);
+}
