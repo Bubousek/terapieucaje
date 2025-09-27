@@ -97,10 +97,10 @@ možné.
       <p>Pole označená <span aria-hidden="true">★</span> jsou povinná.</p>
     </header>
 
-    <!-- Děkovná zpráva – zobrazí se po přesměrování na /kontakt#dekujeme -->
+    <!-- Děkovná zpráva – zobrazí se po přesměrování na /kontakt#dekujeme
     <div id="dekujeme" role="status" aria-live="polite">
       Děkujeme za zprávu! Ozvu se vám co nejdříve.
-    </div>
+    </div>  -->
 
     <section class="contact-card" aria-label="Kontaktní formulář">
       <form action="/send.php" method="post" novalidate>
@@ -109,15 +109,15 @@ možné.
         <!-- Jméno a příjmení -->
         <div class="group">
           <label for="name">Jméno a&nbsp;příjmení <span class="req" aria-hidden="true">★</span></label>
-          <input id="name" name="name" type="text" placeholder="Anna Nováková" required autocomplete="name">
-          <p class="error-msg">Tohle pole je povinné.</p>
+          <input id="name" name="name" type="text" placeholder="Vaše jméno" required autocomplete="name">
+         
         </div>
 
         <!-- E-mail -->
         <div class="group">
           <label for="email">E-mail <span class="req" aria-hidden="true">★</span></label>
           <input id="email" name="email" type="email" placeholder="vase@adresa.cz" required autocomplete="email">
-          <p class="error-msg">Zadejte prosím platný e-mail.</p>
+        
         </div>
 
         <!-- Telefon + Předmět (na desktopu vedle sebe) -->
@@ -125,7 +125,7 @@ možné.
           <div class="group">
             <label for="phone">Telefon</label>
             <input id="phone" name="phone" type="tel" placeholder="+420 777 123 456" autocomplete="tel" pattern="[\d\s()+\-]{6,}">
-            <p class="error-msg">Zadejte prosím platné číslo.</p>
+           
           </div>
 
           <div class="group">
@@ -142,8 +142,8 @@ možné.
         <!-- Zpráva -->
         <div class="group">
           <label for="message">Vaše zpráva <span class="req" aria-hidden="true">★</span></label>
-          <textarea id="message" name="message" placeholder="Sem napište detaily…" required></textarea>
-          <p class="error-msg">Tohle pole je povinné.</p>
+          <textarea id="message" name="message"  required></textarea>
+         
         </div>
 
         <!-- Souhlas GDPR -->

@@ -37,7 +37,6 @@ html { box-sizing: border-box; }
   
       margin: 0;
       font-family: raleway;
-      font-weight: 300;
       font-style: normal;
       line-height: 1.25;
       font-size: 1.2rem;
@@ -47,7 +46,17 @@ html { box-sizing: border-box; }
       margin-right: auto;
    
     }
-  
+
+    strong {
+      font-weight: 500;
+
+    }
+
+    @media (max-width:600px){
+      body {
+        font-weight: 300;
+      } 
+    }
     h2 {
       font-size: 3rem;
       font-weight: 300;
@@ -521,11 +530,18 @@ html { box-sizing: border-box; }
       text-align: center;
      padding-left: 40px;
      padding-right: 40px;
-  }
+  }}
 
     .rezervace-cenik {
       padding: 0, 40px;
     }
+
+   .btn-primary {
+    color: darkgreen;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 40px;
+   }
 
     /* kontaktnií formulář */
 
@@ -535,16 +551,16 @@ html { box-sizing: border-box; }
       box-shadow: none;
       padding: 0;
       text-align: right;
-      padding-right: 400px;
+      padding-right: 300px;
       
     }
     
     /* větší rozestupy mezi prvky */
-    form{ gap: 28px; }
+    form{ gap: 20px; }
 
     .form-title {
       font-family: Qwitcher Grypen;
-      font-size: 4rem;
+      font-size: 3rem;
     }
     
     /* štítky – jemná šedá, lehčí řez */
@@ -572,8 +588,8 @@ html { box-sizing: border-box; }
     input[type="text"],
     input[type="email"],
     input[type="tel"],
-    select{ min-height: 56px; }     
-    textarea{ min-height: 112px; resize: vertical; }
+    select{ min-height: 40px; }     
+    textarea{ min-height: 80px; resize: vertical; }
     
     input::placeholder,
     textarea::placeholder{ color: #b1ada5; }
@@ -584,11 +600,11 @@ html { box-sizing: border-box; }
       border-color: #a7a296;
     }
     
-    /* chybové stavy necháme jen okrajem (bez červeného pozadí) */
+    /* chybové stavy necháme jen okrajem (bez červeného pozadí) 
     input:invalid, select:invalid, textarea:invalid{
       border-color: #b56b6b;
     }
-    .error-msg{ color:#b56b6b; }
+    .error-msg{ color:#b56b6b; } */
     
     /* dvousloupcová řada (ponecháno) */
     .row{ gap: 28px; }
