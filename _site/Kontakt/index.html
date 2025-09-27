@@ -4,60 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terapie u čaje</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
+  <div class="split-bg">
 
+  <div class="layout">
+    <header class="header">
 
-  
-  <header class="header">
+      <div class="header__logo-container">
+        <a href="/index" class="header__logo-link">
+          <img src="/images/logo"  alt="Terapie u caje Logo" class="header__logo">
+      </a>
+      <nav class="header-navigation">
+        <!-- Hlavní menu toggle -->
+        <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+        <label for="menu-checkbox" class="menu__toggler">☰</label>
 
-    <div class="header__logo-container">
-      <a href="/cs/index" class="header__logo-link">
-        <img src="/images/logo" alt="Terapie u caje Logo" class="header__logo">
-    </a>
-    <nav class="header-navigation">
-      <!-- Hlavní menu toggle -->
-      <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-      <label for="menu-checkbox" class="menu__toggler">☰</label>
+        <ul class="header-navigation__list">
+          <li class="header-navigation__tabs">
+            <a class="header-navigation__button" href="/O_mne">O mně</a>
+          </li>
+          
+          <li class="header-navigation__tabs">
+            <a class="header-navigation__button" href="/Jak_pracuji">Jak pracuji</a>
+          </li>
+          <li class="header-navigation__tabs">
+            <a class="header-navigation__button" href="/Terapie">Terapie</a>
+          </li>
+          <li class="header-navigation__tabs">
+            <a class="header-navigation__button" href="/Kontakt">Kontakt</a>
+          </li>
+          <li class="header-navigation__tabs">
+            <a class="header-navigation__button" href="/Rezervace">Rezervace</a>
+          </li>
+        </ul>
+      </nav>
+      </div>
 
-      <ul class="header-navigation__list">
-        <li class="header-navigation__tabs">
-          <a class="header-navigation__button" href="/O_mne">O mně</a>
-        </li>
-        
-        <li class="header-navigation__tabs">
-          <a class="header-navigation__button" href="/Jak_pracuji">Jak pracuji</a>
-        </li>
-        <li class="header-navigation__tabs">
-          <a class="header-navigation__button" href="/Terapie">Terapie</a>
-        </li>
-        <li class="header-navigation__tabs">
-          <a class="header-navigation__button" href="/Kontakt">Kontakt</a>
-        </li>
-        <li class="header-navigation__tabs">
-          <a class="header-navigation__button" href="/Rezervace">Rezervace</a>
-        </li>
-      </ul>
-    </nav>
-    </div>
+              
+      <div class="language-switcher">
+            <a href="/en/">EN</a> | <a href="/cs/">CZ</a>
+      </div>
+    </header>
 
-            
-    <div class="language-switcher">
-          <a href="/en/">EN</a> | <a href="/cs/">CZ</a>
-    </div>
-  </header>
+    <main class="main-content">
 
-  <main class="main-content">
-
-    
-<h2 class="kontakt">Kontakt</h2>
+      <div class="main-content">
+<h2 class="page-title">Kontakt</h2>
 <p class="kontakt-adresa"> 
     Terapie probíhá v klidné lokalitě Prahy 5 v budově projektu <strong>Císařská vinice</strong> <br>
     Podbělohorská 3386/63 <br>
@@ -84,42 +84,43 @@
 
 <p class="mhd-bus">
     Telefonní kontakt slouží výhradně pro <strong>naléhavé situace</strong> (např. zpoždění na konzultaci nebo
-akutní rušení termínu) a je dostupný v čase <strong>od 9:00 do 19:00</strong>. <br>
+akutní rušení termínu) a je dostupný v čase <br>
+<strong>od 9:00 do 19:00</strong>. <br>
 Pokud telefon nezvedám, pravděpodobně konzultuji – ozvu se vám zpět, jakmile to bude
 možné.
 </p>
 
+
   <main class="contact-wrap" aria-labelledby="form-title">
     <header class="heading">
-      <h1 id="form-title" class="corinthia-bold">💬 Potřebujete něco upřesnit? Zanechte mi zprávu</h1>
-      <p>Odpovím co nejdříve. Pole označená <span aria-hidden="true">★</span> jsou povinná.</p>
+      <h2 id="form-title"> Potřebujete něco upřesnit? Zanechte mi zprávu</h2>
+      <p>Pole označená <span aria-hidden="true">★</span> jsou povinná.</p>
     </header>
 
-    <!-- Děkovná zpráva (zobrazí se po přesměrování na #dekujeme) -->
+    <!-- Děkovná zpráva – zobrazí se po přesměrování na /kontakt#dekujeme -->
     <div id="dekujeme" role="status" aria-live="polite">
       Děkujeme za zprávu! Ozvu se vám co nejdříve.
     </div>
 
     <section class="contact-card" aria-label="Kontaktní formulář">
-      <form action="send.php" method="post" novalidate>
-        <!-- honeypot proti spamu -->
-        <div class="hp">
-          <label for="website">Nechte prázdné</label>
-          <input id="website" name="website" type="text" autocomplete="off" tabindex="-1">
-        </div>
+      <form action="/send.php" method="post" novalidate>
+        
 
+        <!-- Jméno a příjmení -->
         <div class="group">
           <label for="name">Jméno a&nbsp;příjmení <span class="req" aria-hidden="true">★</span></label>
           <input id="name" name="name" type="text" placeholder="Anna Nováková" required autocomplete="name">
           <p class="error-msg">Tohle pole je povinné.</p>
         </div>
 
+        <!-- E-mail -->
         <div class="group">
           <label for="email">E-mail <span class="req" aria-hidden="true">★</span></label>
-          <input id="email" name="email" type="email" placeholder="vaše@adresa.cz" required autocomplete="email">
+          <input id="email" name="email" type="email" placeholder="vase@adresa.cz" required autocomplete="email">
           <p class="error-msg">Zadejte prosím platný e-mail.</p>
         </div>
 
+        <!-- Telefon + Předmět (na desktopu vedle sebe) -->
         <div class="row">
           <div class="group">
             <label for="phone">Telefon</label>
@@ -127,7 +128,7 @@ možné.
             <p class="error-msg">Zadejte prosím platné číslo.</p>
           </div>
 
-          <div class="group subject-group">
+          <div class="group">
             <label for="subject">Předmět zprávy</label>
             <select id="subject" name="subject">
               <option value="">Vyberte…</option>
@@ -138,41 +139,45 @@ možné.
           </div>
         </div>
 
+        <!-- Zpráva -->
         <div class="group">
           <label for="message">Vaše zpráva <span class="req" aria-hidden="true">★</span></label>
           <textarea id="message" name="message" placeholder="Sem napište detaily…" required></textarea>
           <p class="error-msg">Tohle pole je povinné.</p>
         </div>
 
+        <!-- Souhlas GDPR -->
         <div class="checkbox">
           <input id="gdpr" name="gdpr" type="checkbox" value="souhlasím" required>
           <label for="gdpr">
             Souhlasím se zpracováním osobních údajů dle
-            <a href="/zasady-gdpr" target="_blank" rel="noopener">zásad GDPR</a>.
+            <a href="/cs/zasady-gdpr" target="_blank" rel="noopener">zásad GDPR</a>.
             <span class="req" aria-hidden="true">★</span>
           </label>
         </div>
 
+        <!-- Odeslání -->
         <div class="actions">
-          <button type="submit">👉 Odeslat zprávu</button>
-          <span class="note">Odesláním souhlasíte se zpracováním údajů pro účely vyřízení dotazu.</span>
+          <button type="submit">SUBMIT</button>
+          <span class="note" aria-hidden="true"></span>
         </div>
       </form>
     </section>
   </main>
-</body>
-</html>
-   
-       
-   </main>
-
-
-  <div class="footer-copyright">
-            
-    <a class="footer-copyright__creator" href="mailto: olga@yamato.cz" target="_blank">Created by Smart Panda</a>
-    <p class="footer-copyright__pavla">&copy2025, Mgr. & Mgr. Pavlína Říhová</p>
 </div>
 
+
+    
+        
+    </main>
+
+
+    <div class="footer-copyright">
+              
+      <a class="footer-copyright__creator" href="mailto: olga@yamato.cz" target="_blank">Created by Smart Panda</a>
+      <p class="footer-copyright__pavla">&copy2025, Mgr. & Mgr. Pavlína Říhová</p>
+  </div>
+</div>
  
 
 
