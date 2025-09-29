@@ -96,74 +96,84 @@ možné.
       <h4 class="form-title"  id="form-title"> Potřebujete něco upřesnit? Zanechte mi zprávu</h4>
       <p>Pole označená <span aria-hidden="true">★</span> jsou povinná.</p>
     </header>
+    
+    <div class="contact-columns">
 
-    <!-- Děkovná zpráva – zobrazí se po přesměrování na /kontakt#dekujeme
-    <div id="dekujeme" role="status" aria-live="polite">
-      Děkujeme za zprávu! Ozvu se vám co nejdříve.
-    </div>  -->
+        <aside class="contact-media" aria-hidden="true"></aside>   
 
-    <section class="contact-card" aria-label="Kontaktní formulář">
-      <form action="/send.php" method="post" novalidate>
+      
         
 
-        <!-- Jméno a příjmení -->
-        <div class="group">
-          <label for="name">Jméno a&nbsp;příjmení <span class="req" aria-hidden="true">★</span></label>
-          <input id="name" name="name" type="text" placeholder="Vaše jméno" required autocomplete="name">
-         
-        </div>
+        <!-- Děkovná zpráva – zobrazí se po přesměrování na /kontakt#dekujeme
+        <div id="dekujeme" role="status" aria-live="polite">
+        Děkujeme za zprávu! Ozvu se vám co nejdříve.
+        </div>  -->
 
-        <!-- E-mail -->
-        <div class="group">
-          <label for="email">E-mail <span class="req" aria-hidden="true">★</span></label>
-          <input id="email" name="email" type="email" placeholder="vase@adresa.cz" required autocomplete="email">
-        
-        </div>
+        <section class="contact-card" aria-label="Kontaktní formulář">
+        <form action="/send.php" method="post" novalidate>
+            
 
-        <!-- Telefon + Předmět (na desktopu vedle sebe) -->
-        <div class="row">
-          <div class="group">
-            <label for="phone">Telefon</label>
-            <input id="phone" name="phone" type="tel" placeholder="+420 777 123 456" autocomplete="tel" pattern="[\d\s()+\-]{6,}">
-           
-          </div>
+            <!-- Jméno a příjmení -->
+            <div class="group">
+            <label for="name">Jméno a&nbsp;příjmení <span class="req" aria-hidden="true">★</span></label>
+            <input id="name" name="name" type="text" placeholder="Vaše jméno" required autocomplete="name">
+            
+            </div>
 
-          <div class="group">
-            <label for="subject">Předmět zprávy</label>
-            <select id="subject" name="subject">
-              <option value="">Vyberte…</option>
-              <option>Zrušení termínu</option>
-              <option>Dotaz</option>
-              <option>Jiné</option>
-            </select>
-          </div>
-        </div>
+            <!-- E-mail -->
+            <div class="group">
+            <label for="email">E-mail <span class="req" aria-hidden="true">★</span></label>
+            <input id="email" name="email" type="email" placeholder="vase@adresa.cz" required autocomplete="email">
+            
+            </div>
 
-        <!-- Zpráva -->
-        <div class="group">
-          <label for="message">Vaše zpráva <span class="req" aria-hidden="true">★</span></label>
-          <textarea id="message" name="message"  required></textarea>
-         
-        </div>
+            <!-- Telefon + Předmět (na desktopu vedle sebe) -->
+            <div class="row">
+            <div class="group">
+                <label for="phone">Telefon</label>
+                <input id="phone" name="phone" type="tel" placeholder="+420 777 123 456" autocomplete="tel" pattern="[\d\s()+\-]{6,}">
+            
+            </div>
 
-        <!-- Souhlas GDPR -->
-        <div class="checkbox">
-          <input id="gdpr" name="gdpr" type="checkbox" value="souhlasím" required>
-          <label for="gdpr">
-            Souhlasím se zpracováním osobních údajů dle
-            <a href="/cs/zasady-gdpr" target="_blank" rel="noopener">zásad GDPR</a>.
-            <span class="req" aria-hidden="true">★</span>
-          </label>
-        </div>
+            <div class="group">
+                <label for="subject">Předmět zprávy</label>
+                <select id="subject" name="subject">
+                <option value="">Vyberte…</option>
+                <option>Zrušení termínu</option>
+                <option>Dotaz</option>
+                <option>Jiné</option>
+                </select>
+            </div>
+            </div>
 
-        <!-- Odeslání -->
-        <div class="actions">
-          <button type="submit">SUBMIT</button>
-          <span class="note" aria-hidden="true"></span>
-        </div>
+            <!-- Zpráva -->
+            <div class="group">
+            <label for="message">Vaše zpráva <span class="req" aria-hidden="true">★</span></label>
+            <textarea id="message" name="message"  required></textarea>
+            
+            </div>
+
+            <!-- Souhlas GDPR -->
+            <div class="checkbox">
+            <input id="gdpr" name="gdpr" type="checkbox" value="souhlasím" required>
+            <label for="gdpr">
+                Souhlasím se zpracováním osobních údajů dle
+                <a href="/cs/zasady-gdpr" target="_blank" rel="noopener">zásad GDPR</a>.
+                <span class="req" aria-hidden="true">★</span>
+            </label>
+            </div>
+
+            <!-- Odeslání -->
+            <div class="actions">
+            <button type="submit">SUBMIT</button>
+            <span class="note" aria-hidden="true"></span>
+            </div>
+            
+             
+    </div>
       </form>
     </section>
-
+  
   </main>
 </section>
 

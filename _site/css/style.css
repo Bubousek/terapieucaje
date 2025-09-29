@@ -191,6 +191,7 @@ html { box-sizing: border-box; }
   text-align: right;
   margin-top: 0.1rem;
   margin-right: 1rem;
+  margin-bottom: 3rem;
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -319,9 +320,23 @@ html { box-sizing: border-box; }
   font-family: "Qwitcher Grypen";
   font-style: italic;
   font-weight: 200;
-  margin: 0;
+  margin-top: 60px;
+  margin-bottom: 60px;
   color: #3c2f27;
   text-align: center;
+  line-height: 0.5;
+}
+
+.motto {
+  font-size: 30px;
+  font-family: "Qwitcher Grypen";
+    font-style: italic;
+    font-weight: 500;
+    text-align: center;
+    color: #3c2f27;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 60px;
 
 }
 
@@ -334,19 +349,16 @@ html { box-sizing: border-box; }
     text-align: center;
     margin: 0;
     color: #3c2f27;
+    
 
-  } }
-
-
+  } 
 .motto {
   font-size: 40px;
-  font-family: "Qwitcher Grypen";
-    font-style: italic;
-    font-weight: 500;
-    text-align: center;
-    color: #3c2f27;
 
-}
+} }
+
+
+
 
   @media screen  and (min-width: 600px) {
     .footer-copyright {
@@ -499,6 +511,40 @@ html { box-sizing: border-box; }
       padding-right: 20px;
     }
 
+    /* layout + mobil: 1 sloupec, bez obrázku */
+.contact-wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 24px);
+  display: grid;
+  gap: 24px;
+}
+.contact-columns{ display: block; }
+.contact-media{ display: none; } /* na mobilu úplně pryč */
+
+/* desktop: 2 sloupce a obrázek jen tady */
+@media (min-width: 900px){
+  .contact-columns{
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
+  }
+  .contact-card{
+    flex: 0 1 65%;
+    min-width: 0;
+  }
+  .contact-media{
+    display: block;
+    flex: 0 1 35%;
+    min-height: 560px;           /* uprav výšku podle potřeby */
+    background:
+      /* jemný zesvětlující přechod zprava → doleva (volitelné) */
+      linear-gradient(to left, rgba(255,255,255,.35), rgba(255,255,255,0)),
+      url("/images/pexels-ivi-nnnnnn-129330-33998681.jpg") center / cover no-repeat;  /* ← cesta k fotce */
+    border: 2px solid #c9c4bb;   /* sladěno s okraji inputů */
+  }
+}
+
     .kontakt-adresa {
       text-align: center;
       font-weight: 200;
@@ -554,7 +600,9 @@ html { box-sizing: border-box; }
 
     .form-title {
       font-family: Qwitcher Grypen;
-      font-size: 3rem;
+      font-size: 4rem;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
     
     /* štítky – jemná šedá, lehčí řez */
@@ -603,7 +651,7 @@ html { box-sizing: border-box; }
       textarea { 
         width: 100%; }
       .contact-card {
-        padding-right: 300px;
+        padding-right: 10px;
       }
       }
 
