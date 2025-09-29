@@ -66,54 +66,48 @@ html { box-sizing: border-box; }
       font-size: 2rem;
       font-weight: 200;
     }
-    :root{
-      --photo-url: url("/images/vecteezy_abstract-picture-with-fragmented-interior-textures-prints_27803643\ 2.jpg"); /* ← tvoje fotka */
-      --right-bg:  #fffdf6;                 /* pravá barva pozadí */
-      --left-mobile: 85%;                   /* šířka fotky na mobilu */
-      --left-desktop: 70%;                  /* šířka fotky na desktopu */
-    }
-    
-    .split-bg{
-      position: relative;
-      isolation: isolate;
-      background: var(--right-bg);
-      min-height: 100%;
-    }
-    
-    .split-bg::before{
-      content:"";
-      position: absolute;
-      inset: 0 auto 0 0;           /* vlevo, přes celou výšku */
-      width: var(--left-mobile);
-      /* 1) BÍLÝ GRADIENT zprava → doleva (plynulý), 2) fotka pod ním */
-      background:
-        linear-gradient(to left,
-          rgb(255, 255, 255) 15%,
-          rgba(255,255,255,.28) 45%,
-          rgba(255,255,255,.12) 75%,
-          rgba(255,255,255,0)   100%
-        ),
-        var(--photo-url) center / cover no-repeat;
-      z-index: -1;
-    }
-    
-    @media (min-width:1100px){
-      .split-bg::before{ width: var(--left-desktop); }
-    }
-    
-    /* (volitelně) na malých displejích ještě o fous světlejší */
-    @media (max-width:600px){
-      .split-bg::before{
-        background:
-          linear-gradient(to left,
-            rgba(255,255,255,.55) 0%,
-            rgba(255,255,255,.32) 35%,
-            rgba(255,255,255,.14) 65%,
-            rgba(255,255,255,0)    100%
-          ),
-          var(--photo-url) center / cover no-repeat;
-      }
-    }
+
+  /* === MOBIL: výchozí proměnné === */
+:root{
+  --right-bg:  white; /* pravá barva pozadí */
+  --photo-url: url("/images/white-recycle-paper-texture.jpg"); /* mobilní fotka */
+  --left-width: 50%;    /* šířka levé fotky na mobilu */
+}
+
+/* wrapper s pravým pozadím */
+.split-bg{
+  position: relative;
+  isolation: isolate;
+  background: var(--right-bg);
+  min-height: 100%;
+}
+
+/* levý pruh s fotkou + jemné zesvětlení zprava doleva */
+.split-bg::before{
+  content:"";
+  position: absolute;
+  inset: 0 auto 0 0;               /* vlevo, přes celou výšku wrapperu */
+  width: var(--left-width);
+  background:
+    /* bílý přechod zprava → doleva (plynulý) */
+    linear-gradient(to left,
+      rgb(255, 255, 255) 15%,
+      rgba(255,255,255,.28) 45%,
+      rgba(255,255,255,.12) 75%,
+      rgba(255,255,255,0)  100%
+    ),
+    var(--photo-url) center / cover no-repeat;
+  z-index: -1;
+}
+
+/* === DESKTOP: přepiš proměnné AŽ TADY (tenhle blok musí být až za výchozími) === */
+@media (min-width: 800px){
+  :root{
+    /* URL s mezerou – použij %20, nebo soubor přejmenuj bez mezer */
+    --photo-url: url("/images/vecteezy_abstract-picture-with-fragmented-interior-textures-prints_27803643%202.jpg");
+    --left-width: 70%;
+  }
+}
 
     
   
@@ -551,6 +545,7 @@ html { box-sizing: border-box; }
       box-shadow: none;
       padding: 0;
       text-align: right;
+     
       
     }
     
@@ -606,12 +601,11 @@ html { box-sizing: border-box; }
       input[type="email"],
       input[type="tel"],
       textarea { 
-        width: 100%; 
+        width: 100%; }
+      .contact-card {
+        padding-right: 300px;
       }
-     .contact-card {
-      padding-right: 300px;
-     }
-    }
+      }
 
     
     /* focus – jen ztmavení okraje, bez záře */
