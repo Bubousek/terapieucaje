@@ -187,6 +187,8 @@ html { box-sizing: border-box; }
     color: #5B6047;
     max-width: 100px;
     max-height: auto;
+    margin-top: 20px;
+    margin-left: 20px;
   }
 
   /* prepinac CS/EN */
