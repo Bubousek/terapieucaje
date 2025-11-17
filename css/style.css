@@ -133,12 +133,12 @@ html { box-sizing: border-box; }
     justify-content: space-between;
    
   }
-  
+  /*
   .header__logo {
     height: 45px;
     width: auto;
     padding: 0; 
-  }
+  } */
   
   .header-navigation__tabs {
     position: relative;
