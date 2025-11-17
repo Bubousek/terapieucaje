@@ -183,7 +183,9 @@ html { box-sizing: border-box; }
   
   }
   
-  
+  .logo {
+    color: #5B6047;
+  }
 
   /* prepinac CS/EN */
 
@@ -408,6 +410,7 @@ html { box-sizing: border-box; }
       font-family: Qwitcher Grypen;
       font-size: 4rem;
       margin: 0;
+      margin-bottom: 10px;
     }
 
     .foto-2 {
