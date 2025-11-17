@@ -185,6 +185,8 @@ html { box-sizing: border-box; }
   
   .logo {
     color: #5B6047;
+    max-width: 35px;
+    max-height: auto;
   }
 
   /* prepinac CS/EN */
@@ -401,7 +403,7 @@ html { box-sizing: border-box; }
 
     .foto-1 {
       position: relative;
-      margin-bottom: 20px;
+      margin-bottom: 5px;
     }
 
     .foto-1__popis {
