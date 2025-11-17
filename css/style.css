@@ -135,7 +135,7 @@ html { box-sizing: border-box; }
   }
   
   .header__logo {
-    height: 75px;
+    height: 45px;
     width: auto;
     padding: 0; 
   }
@@ -401,6 +401,7 @@ html { box-sizing: border-box; }
 
     .foto-1 {
       position: relative;
+      margin-bottom: 20px;
     }
 
     .foto-1__popis {
@@ -410,7 +411,7 @@ html { box-sizing: border-box; }
       font-family: Qwitcher Grypen;
       font-size: 4rem;
       margin: 0;
-      margin-bottom: 10px;
+      
     }
 
     .foto-2 {
