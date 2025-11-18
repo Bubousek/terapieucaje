@@ -26,6 +26,13 @@ html { box-sizing: border-box; }
   font-style: normal;
 }
 
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .raleway {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -269,7 +276,7 @@ html { box-sizing: border-box; }
   display: block; 
   margin-left: auto;
   margin-right: auto;
-  height: 80px; /* Výška loga */
+  height: 120px; /* Výška loga */
 }
 .header__logo-container {
   display: inline;
@@ -323,8 +330,8 @@ html { box-sizing: border-box; }
 
 .main-title {
   font-size: 8rem;
-  font-family: "Qwitcher Grypen";
-  font-style: italic;
+  font-family: "Great Vibes";
+  font-style: normal;
   font-weight: 200;
   margin-top: 60px;
   margin-bottom: 60px;
@@ -335,9 +342,9 @@ html { box-sizing: border-box; }
 
 .motto {
   font-size: 30px;
-  font-family: "Qwitcher Grypen";
-    font-style: italic;
-    font-weight: 500;
+  font-family: "Great Vibes";
+    font-style: normal;
+    font-weight: 400;
     text-align: center;
     color: #3c2f27;
     margin-left: 10px;
@@ -349,8 +356,8 @@ html { box-sizing: border-box; }
 @media screen  and (min-width: 1100px) {
 .main-title {
     font-size: 15rem;
-    font-family: "Qwitcher Grypen";
-    font-style: italic;
+    font-family: "Great Vibes";
+    font-style: normal;
     font-weight: 200;
     text-align: center;
     margin: 0;
@@ -412,7 +419,7 @@ html { box-sizing: border-box; }
       position: absolute;
       right: 40px; bottom: 20px;
       color: white;
-      font-family: Qwitcher Grypen;
+      font-family: Great Vibes;
       font-size: 4rem;
       margin: 0;
       
@@ -441,7 +448,7 @@ html { box-sizing: border-box; }
       right: 20px; bottom: 20px;
       margin: 0;
       color: white;
-      font-family: Qwitcher Grypen;
+      font-family: Great Vibes;
       font-size: 2rem;
       font-weight: bold;
 
@@ -464,7 +471,7 @@ html { box-sizing: border-box; }
       position: absolute;
       right: 40px; bottom: 20px;
       color: white;
-      font-family: Qwitcher Grypen;
+      font-family: Great Vibes;
       font-size: 60px;
       margin: 0;
     }
@@ -493,7 +500,7 @@ html { box-sizing: border-box; }
       left: 20px; top: 10px;
       margin: 0;
       color: white;
-      font-family: Qwitcher Grypen;
+      font-family: Great Vibes;
       font-size: 2rem;
       font-weight: bold;
 
@@ -523,7 +530,7 @@ html { box-sizing: border-box; }
 .contact-wrap{
   max-width: 1200px;
   margin: 0 auto;
-  padding: clamp(16px, 3vw, 24px);
+  /*padding: clamp(16px, 3vw, 24px);*/
   display: grid;
   gap: 24px;
 }
@@ -607,7 +614,7 @@ html { box-sizing: border-box; }
     form{ gap: 20px; }
 
     .form-title {
-      font-family: Qwitcher Grypen;
+      font-family: Great Vibes;
       font-size: 4rem;
       margin-top: 20px;
       margin-bottom: 20px;
