@@ -1,733 +1,184 @@
 
+/* ============================
+   ZÁKLAD
+============================ */
+
 html { box-sizing: border-box; }
-*, ::before, ::after { box-sizing: inherit; }
+*, *::before, *::after { box-sizing: inherit; }
 
-
-.montserrat-terapie {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: italic;
-}
-.alex-brush-regular {
-  font-family: "Alex Brush", cursive;
-  font-weight: 400;
-  font-style: normal;
+body{
+  margin:0;
+  font-family: "Raleway", sans-serif;
+  font-size:1.15rem;
+  line-height:1.5;
+  font-weight:300;
+  color:#3c2f27;
 }
 
-
-
-  
-  body {
-  
-      margin: 0;
-      
-      font-style: normal;
-      line-height: 1.25;
-      font-size: 1.2rem;
-      font-weight: 200;
-      color: #3c2f27;
-      margin-left: auto;
-      margin-right: auto;
-   
-    }
-
-    strong {
-      font-weight: 500;
-
-    }
-
-    @media (max-width:600px){
-      body {
-        font-weight: 300;
-      } 
-    }
-    h2 {
-      font-size: 3rem;
-      font-weight: 300;
-    }
-
-    h3 {
-      font-size: 2rem;
-      font-weight: 200;
-    }
-
-  /* === MOBIL: výchozí proměnné === */
-:root{
-  --right-bg:  white; /* pravá barva pozadí */
-  --photo-url: url("/images/white-recycle-paper-texture.jpg"); /* mobilní fotka */
-  --left-width: 50%;    /* šířka levé fotky na mobilu */
+strong{
+  font-weight:500;
 }
 
-/* wrapper s pravým pozadím */
-.split-bg{
-  position: relative;
-  isolation: isolate;
-  background: var(--right-bg);
-  min-height: 100%;
+/* ============================
+   HLAVIČKA
+============================ */
+
+.header{
+  max-width:1200px;
+  margin:0 auto;
+  padding:20px;
 }
 
-/* levý pruh s fotkou + jemné zesvětlení zprava doleva */
-.split-bg::before{
-  content:"";
-  position: absolute;
-  inset: 0 auto 0 0;               /* vlevo, přes celou výšku wrapperu */
-  width: var(--left-width);
-  background:
-    /* bílý přechod zprava → doleva (plynulý) */
-    linear-gradient(to left,
-      rgb(255, 255, 255) 15%,
-      rgba(255,255,255,.28) 45%,
-      rgba(255,255,255,.12) 75%,
-      rgba(255,255,255,0)  100%
-    ),
-    var(--photo-url) center / cover no-repeat;
-  z-index: -1;
+/* mobil default */
+.header__logo-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-/* === DESKTOP: přepiš proměnné AŽ TADY (tenhle blok musí být až za výchozími) === */
-@media (min-width: 800px){
-  :root{
-    /* URL s mezerou – použij %20, nebo soubor přejmenuj bez mezer */
-    --photo-url: url("/images/vecteezy_abstract-picture-with-fragmented-interior-textures-prints_27803643%202.jpg");
-    --left-width: 70%;
+.logo{
+  max-width:150px;
+}
+
+/* desktop */
+@media (min-width:1100px){
+  .header__logo-container{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
   }
 }
 
-    
-  
+/* ============================
+   NAVIGACE
+============================ */
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .header {
-    color: #3c2f27;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  
-  
-  .header__logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-   
-  }
-  /*
-  .header__logo {
-    height: 45px;
-    width: auto;
-    padding: 0; 
-  } */
-  
-  .header-navigation__tabs {
-    position: relative;
-  }
-  
-  .header-navigation__list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    
-  }
-  
-  .header-navigation__button {
-      color: #3c2f27;
-      font-size: 1.3rem;
-      font-family: raleway;
-      padding: 0px 12px;
-      text-decoration: none; 
-      display: block;
-      white-space: nowrap;
-      
-  }
-  
-  .header-navigation__button:hover {
-      text-decoration: underline;
-  }
-  .header-navigation__button:active {
-      text-decoration: underline;
-  }
-  .header-navigation__button:visited {
-      text-decoration: none;
-  }
-
-  .header-navigation__link {
-    color: #3c2f27;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    white-space: nowrap;
-  
-  }
-  
-  .logo {
-    color: #5B6047;
-    max-width: 150px;
-    max-height: auto;
-    margin-top: 20px;
-    margin-left: 20px;
-  }
-
-  /* prepinac CS/EN */
-
- .language-switcher {
-  text-align: right;
-  margin-top: 0.1rem;
-  margin-right: 1rem;
-  margin-bottom: 3rem;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
+.header-navigation__list{
+  list-style:none;
+  padding:0;
+  margin:0;
 }
 
-.language-switcher a {
-  text-decoration: none;
-  color: #3c2f27; 
-  margin-left: 0;
+/* mobil */
+.menu__checkbox{
+  position:absolute;
+  left:-9999px;
 }
 
-@media (max-width: 1099px) {
-  .language-switcher {
-    text-align: center;
-    font-size: 0.9rem;
-    margin-right: 0;
-  }
-}
-  
-/*hamburger menu */
-.menu__checkbox {
-  position: absolute;
-  left: -9999px;                   /*display none */
+.menu__toggler{
+  font-size:2.5rem;
+  cursor:pointer;
+  position:absolute;
+  top:25px;
+  right:25px;
 }
 
-.menu__toggler {
-  cursor: pointer;
-  color: #3c2f27;
-  font-size: 2.5rem;
-  
-  
+.header-navigation__list{
+  display:none;
+  text-align:center;
 }
 
-.header-navigation__list {
-  display: none;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  
+.menu__checkbox:checked ~ .header-navigation__list{
+  display:block;
 }
 
-.header-navigation__tabs {
-  border-bottom: 1px solid #73845a;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  font-weight: 300;
-  font-style: normal;
+.header-navigation__button{
+  display:block;
+  padding:12px;
+  text-decoration:none;
+  color:#3c2f27;
+  font-weight:300;
 }
 
-.header-navigation__button {
-  font-weight: 300;
-    font-style: normal;
-    padding: 10px 15px;
-    
-}
-.header-navigation__link {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 20px;
-}
+/* desktop */
+@media (min-width:1100px){
+  .menu__toggler{ display:none; }
 
-
-.menu__checkbox:checked ~ .header-navigation__list {
-  display: block
-
-}
-.header__logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* horizontálně */
-  justify-content: center;
-  text-align: center;
-}
-
-.header__logo {
-  margin-left: 0;
-  margin-right: 0;
-  display: block;
-}
-
-.menu__toggler {
-  position: absolute;
-  right: 20px;
-  top: 25px;
-}
-
-@media screen and (max-width: 1099px) {
-  .header-navigation__button:hover {
-    text-decoration: none;
-}
-.header-navigation__button:active {
-    text-decoration: none;
-}
-
-  
-}
-
-@media screen  and (min-width: 1100px) {
-  .menu__toggler {
-    display: none; /* Skryje checkbox na větších obrazovkách */
-  }
-  .header-navigation__list {
-    display: flex !important ;/* Zobrazí menu jako flexbox */
-    flex-direction: row; /* Horizontální uspořádání */
-    justify-content: center; /* Zarovná položky na střed */
-  }
-  .header-navigation__link {
-    padding: 15px; /* Větší padding pro desktop */
-  }
-
-  .header-navigation__tabs {
-    border-bottom: none; /* Odstraní spodní okraj na desktopu */
-    margin-top: 0; /* Odstraní horní okraj na desktopu */
-    margin-bottom: 0; /* Odstraní spodní okraj na desktopu */
-  }
-
-  .header-navigation__button {
-    margin-top: 0;
-    font-weight: 300;
-    font-style: normal;
-  }
-
-  .header__logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-   
-  }
-  
-}
-
-.main-title {
-  font-size: 6rem;
-  font-family: "Alex Brush";
-  font-style: normal;
-  font-weight: 400;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  color: #3c2f27;
-  text-align: center;
-  line-height: 0.5;
-}
-
-.motto {
-  font-size: 30px;
-  font-family: "Alex Brush";
-    font-style: normal;
-    font-weight: 400;
-    text-align: center;
-    color: #3c2f27;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 30px;
-
-}
-
-@media screen  and (min-width: 1100px) {
-.main-title {
-    font-size: 11rem;
-    font-family: "Alex Brush";
-    font-style: normal;
-    font-weight: 200;
-    text-align: center;
-    margin: 0 20px 20px 20px;
-    color: #3c2f27;
-    
-
-  } 
-.motto {
-  font-size: 40px;
-  margin-top: 40px;
-
-} }
-
-
-
-
-  @media screen  and (min-width: 600px) {
-    .footer-copyright {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-      }
-    
-    .footer-copyright__creator {
-      color: black;
-      font-size: 14px;
-      font-weight: 300;
-      text-transform: none;
-      font-family: Raleway;
-    }
-    
-    .footer-copyright__pavla {
-      color: black;
-      font-size: 14px;
-      font-weight: 300;
-      margin-top: 0;
-      margin-bottom: 0;
-      font-family: Raleway;
-    }
-
-    .footer-copyright {
-
-      color: black;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-
-   
-
-    .foto-1 {
-      position: relative;
-      margin-bottom: 5px;
-    }
-
-    .foto-1__popis {
-      position: absolute;
-      right: 40px; bottom: 20px;
-      color: white;
-      font-family:"Alex Brush";
-      font-size: 4rem;
-      margin: 0;
-      
-    }
-
-    .foto-2 {
-      position: relative;
-      display: inline-block;
-    }
-
-    .foto-2 img {
-      display: block;
-      width: 100%;
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.4); /* černý průhledný filtr fotka Pavla */
-    }
-    
-    
-
-    .foto-2__popis {
-      position: absolute;
-      right: 20px; bottom: 20px;
-      margin: 0;
-      color: white;
-      font-family: "Alex Brush";
-      font-size: 2rem;
-      font-weight: bold;
-
-    }
-    
-    @media screen  and (min-width: 1100px) {
-
-    .sluzby {
-      display: flex;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .foto-1 {
-      flex-basis: 64%;
-      position: relative;
-    }
-
-    .foto-1__popis {
-      position: absolute;
-      right: 40px; bottom: 20px;
-      color: white;
-      font-family: "Alex Brush";
-      font-size: 60px;
-      margin: 0;
-    }
-
-    .foto-2 {
-      flex-basis: 36%;
-      position: relative;
-      display: inline-block;
-    }
-
-    .foto-2 img {
-      display: block;
-      width: 100%;
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.4); /* černý průhledný filtr fotka Pavla*/
-    }
-    
-    
-
-    .foto-2__popis {
-      position: absolute;
-      left: 20px; top: 10px;
-      margin: 0;
-      color: white;
-      font-family: "Alex Brush";
-      font-size: 2rem;
-      font-weight: bold;
-
-    }
-  }
-
-    img { 
-      display: block;
-      width: 100%;
-
-    }
-
-    .page-title {
-      text-align: center;
-      font-size: 4rem;
-      font-family: raleway;
-      font-weight: 200;
-      margin-bottom: 20px;
-    }
-
-    .kontakt, .rezervace-cenik {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    /* layout + mobil: 1 sloupec, bez obrázku */
-.contact-wrap{
-  max-width: 1200px;
-  margin: 0 auto;
-  /*padding: clamp(16px, 3vw, 24px);*/
-  display: grid;
-  gap: 24px;
-}
-.contact-columns{ display: block; }
-.contact-media{ display: none; } /* na mobilu úplně pryč */
-
-/* desktop: 2 sloupce a obrázek jen tady */
-@media (min-width: 900px){
-  .contact-columns{
-    display: flex;
-    align-items: stretch;
-    gap: 40px;
-  }
-  .contact-card{
-    flex: 0 1 65%;
-    min-width: 0;
-  }
-  .contact-media{
-    display: block;
-    flex: 0 1 35%;
-    min-height: 560px;           /* uprav výšku podle potřeby */
-    background:
-      /* jemný zesvětlující přechod zprava → doleva (volitelné) */
-      linear-gradient(to left, rgba(255,255,255,.35), rgba(255,255,255,0)),
-      url("/images/pexels-ivi-nnnnnn-129330-33998681.jpg") center / cover no-repeat;  /* ← cesta k fotce */
-    border: 2px solid #c9c4bb;   /* sladěno s okraji inputů */
+  .header-navigation__list{
+    display:flex;
+    gap:30px;
   }
 }
 
-    .kontakt-adresa {
-      text-align: center;
-      font-weight: 200;
-    }
-    
+/* ============================
+   JAZYK
+============================ */
 
-    .mapa-obrazek {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 200px;
-      max-height: 60px;
-    }
-
-    .main-content {
-     
-      margin: 0, auto;
-      text-align: right;
-      }
-    
-    @media screen  and (min-width: 1100px) {
-    .main-content {
-      max-width: 1200;
-      margin: 0, auto;
-      text-align: center;
-     padding-left: 40px;
-     padding-right: 40px;
-  }}
-
-    .rezervace-cenik {
-      padding: 0, 40px;
-    }
-
-   .btn-primary {
-    color: darkgreen;
-    font-size: 2rem;
-    font-weight: 400;
-    margin-top: 40px;
-   }
-
-    /* kontaktnií formulář */
-
-    .contact-card{
-      background: transparent;
-      border: 0;
-      box-shadow: none;
-      padding: 0;
-      text-align: right;
-     
-      
-    }
-    
-    /* větší rozestupy mezi prvky */
-    form{ gap: 20px; }
-
-    .form-title {
-      font-family: "Alex Brush";
-      font-size: 4rem;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-    
-    /* štítky – jemná šedá, lehčí řez */
-    label{
-      color: #7a7872;
-      font-weight: 400;
-      letter-spacing: 0.01em;
-      margin-bottom: 10px;
-    }
-    
-    /* kolonky – světle vyplněné, tenký okraj, bez zaoblení */
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    select,
-    textarea{
-      background: #f7f7f5;          /* světle šedá výplň */
-      border: 2px solid #c9c4bb;     /* tenký teplý okraj */
-      border-radius: 0;              /* ostré rohy */
-      padding: 16px 18px;
-      color: #3e3c37;
-      line-height: 1.35;
-      box-shadow: none;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    select{ min-height: 40px; }     
-    textarea{ min-height: 80px; resize: vertical; }
-    
-    input::placeholder,
-    textarea::placeholder{ color: #b1ada5; }
-
-    @media (max-width: 800px){
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    textarea { 
-      width: 100%; }
-    }
-
-    @media (min-width: 800px){
-      input[type="text"],
-      input[type="email"],
-      input[type="tel"],
-      textarea { 
-        width: 100%; }
-      .contact-card {
-        padding-right: 10px;
-      }
-      }
-
-    
-    /* focus – jen ztmavení okraje, bez záře */
-    input:focus, select:focus, textarea:focus{
-      outline: none;
-      border-color: #a7a296;
-    }
-    
-    /* chybové stavy necháme jen okrajem (bez červeného pozadí) 
-    input:invalid, select:invalid, textarea:invalid{
-      border-color: #b56b6b;
-    }
-    .error-msg{ color:#b56b6b; } */
-    
-    /* dvousloupcová řada (ponecháno) */
-    .row{ gap: 28px; }
-    @media (min-width: 720px){
-      .row{ grid-template-columns: 1fr 1fr; }
-    }
-    
-    /* pás s tlačítkem vlevo – jako box pod tlačítkem */
-    .actions{
-      display: inline-block;          /* aby box nebyl přes celou šířku */
-      background: #f6f1e8;            /* krémové pozadí pod tlačítkem */
-      padding: 22px 24px;
-      margin-top: 8px;
-      border-radius: 0;               /* ostré rohy */
-    }
-    
-    /* tlačítko – malé modré, kapitálky s rozestupy písmen */
-    .actions button{
-      background: #b7c7e2;            /* jemně modré jako na náhledu */
-      color: #2a3542;
-      border: 0;
-      border-radius: 2px;
-      padding: 10px 16px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.28em;         /* roztažené písmo */
-      box-shadow: none;
-    }
-    .actions button:hover{ filter: brightness(1.03); }
-    .actions button:active{ transform: translateY(1px); }
-    
-    /* na mobilu ať se pás i tlačítko chovají komfortně */
-    @media (max-width: 600px){
-      .actions{ width: 100%; padding: 18px; }
-      .actions button{ width: 100%; text-align: center; letter-spacing: 0.24
-      } }
-
-      form { display: grid; gap: 28px; }
-
-.row{
-  display: grid;
-  grid-template-columns: 1fr !important; /* přebije dřívější 1fr 1fr */
-  gap: 28px;
+.language-switcher{
+  text-align:center;
+  font-size:.9rem;
+  margin-top:10px;
 }
 
-/* volitelně sjednotíme okraje mezi skupinami */
-.group { margin: 0; }
+@media (min-width:1100px){
+  .language-switcher{
+    text-align:right;
+  }
+}
+
+/* ============================
+   TITULKY
+============================ */
 
 .main-title,
 .motto,
 .foto-1__popis,
 .foto-2__popis,
-.form-title {
-  font-family: "Alex Brush", cursive !important;
-  letter-spacing: 0.03em;
+.form-title{
+  font-family:"Alex Brush", cursive;
+  letter-spacing:.03em;
 }
 
-strong {
-  font-weight: 500;
+.main-title{
+  font-size:6rem;
+  text-align:center;
+  margin:40px 0;
+}
+
+@media (min-width:1100px){
+  .main-title{ font-size:10rem; }
+}
+
+/* ============================
+   STRÁNKY
+============================ */
+
+.page-title{
+  text-align:center;
+  font-size:3.5rem;
+  font-weight:200;
+}
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* ============================
+   FORMULÁŘ
+============================ */
+
+input, textarea, select{
+  width:100%;
+  padding:14px;
+  border:2px solid #c9c4bb;
+  background:#f7f7f5;
+  font-family:"Raleway", sans-serif;
+}
+
+input:focus, textarea:focus{
+  outline:none;
+  border-color:#a7a296;
+}
+
+/* ============================
+   TLAČÍTKO
+============================ */
+
+.btn-primary{
+  font-size:1.5rem;
+  color:#4a5a3a;
+  text-decoration:none;
+  border-bottom:1px solid #4a5a3a;
 }
