@@ -409,7 +409,9 @@ html { box-sizing: border-box; }
       margin-top: 40px;
     }
 
-    
+    .foto-ben {
+      max-height: 200px;
+    }
 
     .foto-1 {
       position: relative;
@@ -570,7 +572,8 @@ html { box-sizing: border-box; }
     .mapa-obrazek {
       margin-left: auto;
       margin-right: auto;
-      max-width: 60px;
+      max-width: 200px;
+      max-height: 60px;
     }
 
     .main-content {
