@@ -272,15 +272,24 @@ html { box-sizing: border-box; }
   display: block
 
 }
-.header__logo {
-  display: block; 
-  margin-left: auto;
-  margin-right: auto;
-  height: 120px; /* Výška loga */
-}
 .header__logo-container {
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* horizontálně */
+  justify-content: center;
   text-align: center;
+}
+
+.header__logo {
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
+}
+
+.menu__toggler {
+  position: absolute;
+  right: 20px;
+  top: 25px;
 }
 
 @media screen and (max-width: 1099px) {
