@@ -313,12 +313,7 @@ html { box-sizing: border-box; }
     font-style: normal;
   }
 
-  .header__logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-   
-  }
+  
   
 }
 
