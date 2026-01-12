@@ -723,3 +723,12 @@ html { box-sizing: border-box; }
 
 /* volitelně sjednotíme okraje mezi skupinami */
 .group { margin: 0; }
+
+.main-title,
+.motto,
+.foto-1__popis,
+.foto-2__popis,
+.form-title {
+  font-family: "Alex Brush", cursive !important;
+  letter-spacing: 0.03em;
+}
