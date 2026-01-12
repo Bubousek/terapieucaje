@@ -727,3 +727,7 @@ html { box-sizing: border-box; }
   font-family: "Alex Brush", cursive !important;
   letter-spacing: 0.03em;
 }
+
+strong {
+  font-weight: 500;
+}
