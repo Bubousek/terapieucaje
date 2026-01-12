@@ -15,19 +15,27 @@ html { box-sizing: border-box; }
   font-style: normal;
 }
 
-body {
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.4;
-  color: #3c2f27;
-  background: white;
-}
 
-/* strong musí fungovat */
-strong {
-  font-weight: 600;
-}
+
+  
+  body {
+  
+      margin: 0;
+      
+      font-style: normal;
+      line-height: 1.25;
+      font-size: 1.2rem;
+      font-weight: 200;
+      color: #3c2f27;
+      margin-left: auto;
+      margin-right: auto;
+   
+    }
+
+    strong {
+      font-weight: 600;
+
+    }
 
     @media (max-width:600px){
       body {
@@ -720,6 +728,3 @@ strong {
   letter-spacing: 0.03em;
 }
 
-strong {
-  font-weight: 500;
-} 
